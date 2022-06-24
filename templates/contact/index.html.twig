@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nous contacter{% endblock %}
+
+{% block content %}
+    <h2>Nous contacter</h2>
+    {% for message in app.flashes('notice') %}
+        <div class="alert alert-info">{{ message }}</div>
+    {% endfor %}
+    <div class="row">
+        <div class="col-md-8">
+            {{ form(form) }}
+        </div>
+        <div class="col-md-4">
+            <strong>La Boutique Française</strong>
+            <hr>
+            06 XX XX XX XX <br>
+            8 rue xxxx xxxx, 75XXX Paris <br>
+            contact@laboutiquefr.xxx
+        </div>
+    </div>
+{% endblock %}
